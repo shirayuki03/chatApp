@@ -6,6 +6,14 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		972294912CFC9DB500B8766F /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 972294902CFC9DB500B8766F /* FirebaseAnalytics */; };
+		972294932CFC9DB500B8766F /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = 972294922CFC9DB500B8766F /* FirebaseAnalyticsOnDeviceConversion */; };
+		972294952CFC9DB500B8766F /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 972294942CFC9DB500B8766F /* FirebaseAnalyticsWithoutAdIdSupport */; };
+		972294972CFC9DB500B8766F /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 972294962CFC9DB500B8766F /* FirebaseAppCheck */; };
+		972294992CFC9DB500B8766F /* FirebaseAppDistribution-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 972294982CFC9DB500B8766F /* FirebaseAppDistribution-Beta */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		972294712CFC9C8B00B8766F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +60,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				972294972CFC9DB500B8766F /* FirebaseAppCheck in Frameworks */,
+				972294912CFC9DB500B8766F /* FirebaseAnalytics in Frameworks */,
+				972294992CFC9DB500B8766F /* FirebaseAppDistribution-Beta in Frameworks */,
+				972294952CFC9DB500B8766F /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
+				972294932CFC9DB500B8766F /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +125,11 @@
 			);
 			name = chatApp;
 			packageProductDependencies = (
+				972294902CFC9DB500B8766F /* FirebaseAnalytics */,
+				972294922CFC9DB500B8766F /* FirebaseAnalyticsOnDeviceConversion */,
+				972294942CFC9DB500B8766F /* FirebaseAnalyticsWithoutAdIdSupport */,
+				972294962CFC9DB500B8766F /* FirebaseAppCheck */,
+				972294982CFC9DB500B8766F /* FirebaseAppDistribution-Beta */,
 			);
 			productName = chatApp;
 			productReference = 972294602CFC9C8A00B8766F /* chatApp.app */;
@@ -195,6 +213,9 @@
 			);
 			mainGroup = 972294572CFC9C8A00B8766F;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				9722948F2CFC9DB500B8766F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 972294612CFC9C8A00B8766F /* Products */;
 			projectDirPath = "";
@@ -558,6 +579,45 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9722948F2CFC9DB500B8766F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		972294902CFC9DB500B8766F /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9722948F2CFC9DB500B8766F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		972294922CFC9DB500B8766F /* FirebaseAnalyticsOnDeviceConversion */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9722948F2CFC9DB500B8766F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsOnDeviceConversion;
+		};
+		972294942CFC9DB500B8766F /* FirebaseAnalyticsWithoutAdIdSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9722948F2CFC9DB500B8766F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsWithoutAdIdSupport;
+		};
+		972294962CFC9DB500B8766F /* FirebaseAppCheck */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9722948F2CFC9DB500B8766F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAppCheck;
+		};
+		972294982CFC9DB500B8766F /* FirebaseAppDistribution-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9722948F2CFC9DB500B8766F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseAppDistribution-Beta";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 972294582CFC9C8A00B8766F /* Project object */;
 }
