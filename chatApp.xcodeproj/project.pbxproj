@@ -12,6 +12,7 @@
 		972294952CFC9DB500B8766F /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 972294942CFC9DB500B8766F /* FirebaseAnalyticsWithoutAdIdSupport */; };
 		972294972CFC9DB500B8766F /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 972294962CFC9DB500B8766F /* FirebaseAppCheck */; };
 		972294992CFC9DB500B8766F /* FirebaseAppDistribution-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 972294982CFC9DB500B8766F /* FirebaseAppDistribution-Beta */; };
+		9722949C2CFCA3A800B8766F /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 9722949B2CFCA3A800B8766F /* FirebaseFirestore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 				972294992CFC9DB500B8766F /* FirebaseAppDistribution-Beta in Frameworks */,
 				972294952CFC9DB500B8766F /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 				972294932CFC9DB500B8766F /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
+				9722949C2CFCA3A800B8766F /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +93,7 @@
 				972294622CFC9C8A00B8766F /* chatApp */,
 				972294732CFC9C8B00B8766F /* chatAppTests */,
 				9722947D2CFC9C8B00B8766F /* chatAppUITests */,
+				9722949A2CFCA3A800B8766F /* Frameworks */,
 				972294612CFC9C8A00B8766F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -103,6 +106,13 @@
 				9722947A2CFC9C8B00B8766F /* chatAppUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		9722949A2CFCA3A800B8766F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,6 +140,7 @@
 				972294942CFC9DB500B8766F /* FirebaseAnalyticsWithoutAdIdSupport */,
 				972294962CFC9DB500B8766F /* FirebaseAppCheck */,
 				972294982CFC9DB500B8766F /* FirebaseAppDistribution-Beta */,
+				9722949B2CFCA3A800B8766F /* FirebaseFirestore */,
 			);
 			productName = chatApp;
 			productReference = 972294602CFC9C8A00B8766F /* chatApp.app */;
@@ -616,6 +627,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 9722948F2CFC9DB500B8766F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = "FirebaseAppDistribution-Beta";
+		};
+		9722949B2CFCA3A800B8766F /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9722948F2CFC9DB500B8766F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
