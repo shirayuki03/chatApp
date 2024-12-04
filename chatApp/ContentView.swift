@@ -74,14 +74,24 @@ struct SetAccountView: View {
                         }
                         .focused($isFocused)
                 }
-                Button("完了") {
-                    
+                Button {
+                    //
+                } label: {
+                    Text("完了")
+                        .foregroundColor(Color.white)
+                        .bold()
                 }
-                .padding()
+                .frame(width: 300, height: 50)
+                .background(Color.yellow)
+                .font(.title2)
+                .cornerRadius(5)
             }
             .navigationTitle("新規登録")
         }
         .interactiveDismissDisabled(isShowingView)
+        .onTapGesture {
+            isFocused = false
+        }
     }
 }
 
