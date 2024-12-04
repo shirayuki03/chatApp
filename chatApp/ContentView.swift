@@ -53,26 +53,63 @@ struct ContentView: View {
 struct SetAccountView: View {
     
     @State private var isShowingView: Bool = true
-    @FocusState var isFocused: Bool
+    @FocusState var isFocused_name: Bool
+    @FocusState var isFocused_password: Bool
+    @FocusState var isFocused_id: Bool
     @State private var userName = ""
+    @State private var password = ""
+    @State private var id = ""
     var maxUserNameLength: Int = 10
     
     var body: some View {
         NavigationView {
             VStack {
+                ZStack {
+                    HStack {
+                        Image(systemName: "exclamationmark.circle")
+                            .font(.title)
+                        Text("ユーザー名、パスワードは後から変える\nことができます。")
+                    }
+                }
+                .frame(width: 350, height: 100)
+                .background(Color(red: 1.0, green: 1.0, blue: 0.0, opacity: 1.0))
+                .cornerRadius(10)
                 HStack {
+                    Spacer(minLength: 25)
+                    Text("ID")
+                        .font(.headline)
+                    Spacer(minLength: 30)
+                    TextField("半角英数字", text: $id)
+                        .textFieldStyle(.roundedBorder)
+                        .focused($isFocused_id)
+                    Spacer(minLength: 25)
+                }
+                HStack {
+                    Spacer()
                     Text("ユーザー名")
                         .font(.headline)
-                        .padding()
+                    Spacer()
                     TextField("10文字以内", text: $userName)
+                        .frame(width: 250)
                         .textFieldStyle(.roundedBorder)
-                        .padding()
                         .onReceive(Just(userName)) { _ in
                             if userName.count > maxUserNameLength {
                                 userName = String(userName.prefix(maxUserNameLength))
                             }
                         }
-                        .focused($isFocused)
+                        .focused($isFocused_name)
+                    Spacer()
+                }
+                HStack {
+                    Spacer()
+                    Text("パスワード")
+                        .font(.headline)
+                    Spacer()
+                    TextField("半角英数字", text: $password)
+                        .frame(width: 250)
+                        .textFieldStyle(.roundedBorder)
+                        .focused($isFocused_password)
+                    Spacer()
                 }
                 Button {
                     //
@@ -90,7 +127,9 @@ struct SetAccountView: View {
         }
         .interactiveDismissDisabled(isShowingView)
         .onTapGesture {
-            isFocused = false
+            isFocused_name = false
+            isFocused_password = false
+            isFocused_id = false
         }
     }
 }
